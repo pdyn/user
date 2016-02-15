@@ -1,0 +1,35 @@
+{
+    "name": "pdyn/user",
+    "description": "Classes for session management and user handling.",
+    "type": "library",
+    "keywords": ["user", "session"],
+    "homepage": "https://pdyn.net",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "James McQuillan",
+            "email": "james@pdyn.net",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "support": {
+        "email": "support@pdyn.net"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "pdyn/base": "1.0.*",
+        "pdyn/database": "1.0.*",
+        "pdyn/datatype": "1.0.*",
+        "pdyn/orm": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=5.1.7",
+        "pdyn/testing": "1.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "pdyn\\user\\": "."
+        }
+    }
+}
