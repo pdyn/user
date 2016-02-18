@@ -114,6 +114,16 @@ class User
 	}
 
 	/**
+	 * Get a URL to view the connection's avatar.
+	 *
+	 * @param string $thumb A thumbnail size to get.
+	 * @return string A URL to view the connection's avatar.
+	 */
+	public function get_avatar_url($thumb = null) {
+		return '';
+	}
+
+	/**
 	 * Set the active session object.
 	 *
 	 * @param UserSession $session A user session.
