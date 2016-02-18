@@ -32,7 +32,8 @@ class User
 			\pdyn\orm\DataObjectAbstract
 		implements
 			\pdyn\user\UserInterface,
-			\pdyn\orm\SearchableObjectInterface
+			\pdyn\orm\SearchableObjectInterface,
+			\pdyn\access\AccessHolderInterface
 		{
 
 	/** @var string A short, unique name for the user. */
@@ -214,6 +215,15 @@ class User
 			$this->DB->update_records('users_preferences', $updated, $where);
 		}
 		$this->prefs[$component][$key] = $value;
+	}
+
+	/**
+	 * Whether the subject gets access to everything.
+	 *
+	 * @return bool Whether the subject gets access to everything.
+	 */
+	public function overrides_all_access() {
+		return ($this->is_admin === true) ? true : false;
 	}
 
 	/**
