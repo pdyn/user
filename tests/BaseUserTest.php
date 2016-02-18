@@ -36,7 +36,7 @@ class MockUser extends \pdyn\user\User {
  */
 class UserTest extends \pdyn\orm\tests\DataobjectTestcase {
 	protected function get_dbschemaclass() {
-		return '\pdyn\user\DbSchema';
+		return ['\pdyn\user\DbSchema'];
 	}
 
 	protected function get_dataobjectclass() {
