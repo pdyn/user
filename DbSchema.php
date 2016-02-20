@@ -86,4 +86,31 @@ class DbSchema extends \pdyn\database\DbSchema {
 			],
 		];
 	}
+
+	public static function userclasses() {
+		return [
+			'columns' => [
+				'id' => 'id',
+				'name' => 'text',
+			],
+			'keys' => [
+				'PRIMARY' => ['id', true],
+			],
+		];
+	}
+
+	public static function userclasses_assignments() {
+		return [
+			'columns' => [
+				'id' => 'id',
+				'userclass_id' => 'id',
+				'user_id' => 'user_id',
+			],
+			'keys' => [
+				'PRIMARY' => ['id', true],
+				'classid' => ['userclass_id', false],
+				'userid' => ['user_id', false],
+			],
+		];
+	}
 }
