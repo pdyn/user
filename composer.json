@@ -12,12 +12,13 @@
             "role": "Developer"
         }
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
     "support": {
         "email": "support@pdyn.net"
     },
     "require": {
         "php": ">=5.4.0",
+        "pdyn/access": "1.0.*",
         "pdyn/base": "1.0.*",
         "pdyn/database": "1.0.*",
         "pdyn/datatype": "1.0.*",
